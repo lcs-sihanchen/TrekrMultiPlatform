@@ -13,6 +13,10 @@
 		9C8A842625BF58C800296A6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8A841125BF58C200296A6E /* ContentView.swift */; };
 		9C8A842725BF58C800296A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C8A841225BF58C800296A6E /* Assets.xcassets */; };
 		9C8A842825BF58C800296A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C8A841225BF58C800296A6E /* Assets.xcassets */; };
+		9C8A843925BF5A2700296A6E /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8A843725BF5A2600296A6E /* locations.json */; };
+		9C8A843A25BF5A2700296A6E /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8A843725BF5A2600296A6E /* locations.json */; };
+		9C8A843B25BF5A2700296A6E /* tips.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8A843825BF5A2600296A6E /* tips.json */; };
+		9C8A843C25BF5A2700296A6E /* tips.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C8A843825BF5A2600296A6E /* tips.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,8 @@
 		9C8A841F25BF58C800296A6E /* TrekrMultiPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrekrMultiPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C8A842125BF58C800296A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C8A842225BF58C800296A6E /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		9C8A843725BF5A2600296A6E /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		9C8A843825BF5A2600296A6E /* tips.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tips.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,8 @@
 		9C8A843425BF58F100296A6E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9C8A843725BF5A2600296A6E /* locations.json */,
+				9C8A843825BF5A2600296A6E /* tips.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,7 +192,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C8A843925BF5A2700296A6E /* locations.json in Resources */,
 				9C8A842725BF58C800296A6E /* Assets.xcassets in Resources */,
+				9C8A843B25BF5A2700296A6E /* tips.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +202,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C8A843A25BF5A2700296A6E /* locations.json in Resources */,
 				9C8A842825BF58C800296A6E /* Assets.xcassets in Resources */,
+				9C8A843C25BF5A2700296A6E /* tips.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
