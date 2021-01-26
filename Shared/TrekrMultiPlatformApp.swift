@@ -11,6 +11,7 @@ import SwiftUI
 struct TrekrMultiPlatformApp: App {
     
     // runs initializer
+    // Source of truth
     @StateObject var store = LocationStore()
     
     var body: some Scene {
@@ -28,7 +29,7 @@ struct TrekrMultiPlatformApp: App {
                 
                 
                 NavigationView {
-                    WorldMap()
+                    WorldMap(store: store)
                 }
                 .tabItem {
                     Image(systemName: "map")

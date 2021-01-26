@@ -9,6 +9,11 @@ import MapKit
 import SwiftUI
 
 struct WorldMap: View {
+    // Derived value of source of truth(list of locations)
+    // Get a reference to the location store
+    // Derived value passed as a parameter
+    // @observedObject
+    @ObservedObject var store: LocationStore
     
     // Control where the map begins
     // Centre on LCS, wide enough to show most of the eastern north america
@@ -19,7 +24,20 @@ struct WorldMap: View {
     var body: some View {
         
         // Connect mapview to the property region
-        Map(coordinateRegion: $region)
+        // List of locations and creating a name in closure
+        Map(coordinateRegion: $region, annotationItems: store.places) { location in
+            
+            // For each instance we create an app annotation view
+            // Need a location
+            MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longtitude)) {
+                // annotate with the image
+                Image(location.country)
+                    .resizable()
+                    .cornerRadius(10)
+                    .frame(width: 80, height: 40)
+                    .shadow(radius: 3)
+            }
+        }
             .navigationTitle("Map")
     }
 }
@@ -27,7 +45,7 @@ struct WorldMap: View {
 struct WorldMap_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            WorldMap()
+            WorldMap(store: testStore)
         }
         
     }
