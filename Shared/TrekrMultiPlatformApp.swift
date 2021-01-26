@@ -10,12 +10,14 @@ import SwiftUI
 @main
 struct TrekrMultiPlatformApp: App {
     
-    
+    // runs initializer
+    @StateObject var store = LocationStore()
     
     var body: some Scene {
         WindowGroup {
             NavigationView{
-                LocationDetail(location: Location.example)
+                // So it s not always showing the detail view
+                LocationsList(store: store)
             }
             
         }
