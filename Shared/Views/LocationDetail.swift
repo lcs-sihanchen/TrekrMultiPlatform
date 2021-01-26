@@ -94,7 +94,7 @@ struct LocationDetail_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             // Show the example in the UI
-            LocationDetail(location: testStore.places[0])
+            LocationDetail(location: testStore.places[0 ])
         }
         
     }
