@@ -28,22 +28,27 @@ struct TrekrMultiPlatformApp: App {
                 
                 
                 
+                #if os(iOS)
+                NavigationView{
+                    WorldMap(store: testStore)
+                }.tabItem {
+                    Image(systemName: "map")
+                    Text("Map")
+                }
+                
+                #else
                 NavigationView {
-                    WorldMap(store: store)
+                    TipsList()
                 }
                 .tabItem {
                     Image(systemName: "map")
                     Text("Map")
                 }
+                #endif
                 
                 
-                NavigationView {
-                    TipsList()
-                }
-                .tabItem {
-                    Image(systemName: "person.fill.questionmark")
-                    Text("Tips")
-                }
+          
+                
                 
                 
             }
