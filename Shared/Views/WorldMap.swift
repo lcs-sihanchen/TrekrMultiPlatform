@@ -23,6 +23,10 @@ struct WorldMap: View {
     
     var body: some View {
         
+        
+        
+        
+        
         // Connect mapview to the property region
         // List of locations and creating a name in closure
         Map(coordinateRegion: $region, annotationItems: store.places) { location in
@@ -30,13 +34,26 @@ struct WorldMap: View {
             // For each instance we create an app annotation view
             // Need a location
             MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longtitude)) {
-                // annotate with the image
-                Image(location.country)
-                    .resizable()
-                    .cornerRadius(10)
-                    .frame(width: 80, height: 40)
-                    .shadow(radius: 3)
+                
+                
+                // For each view create a navigation link to go to its detail
+                NavigationLink(destination: LocationDetail(location: location)) {
+                    // annotate with the image
+                    Image(location.country)
+                        .resizable()
+                        .cornerRadius(10)
+                        .frame(width: 80, height: 40)
+                        .shadow(radius: 3)
+                    
+                    
+                }
+                
             }
+            
+            
+            
+            
+            
         }
             .navigationTitle("Map")
     }
