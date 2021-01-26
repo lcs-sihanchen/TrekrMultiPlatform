@@ -17,7 +17,10 @@ struct TipsList: View {
         // Iterate each tip and give a view
         // No id in the json file
         // Another way to make sure data is unique
-        List(tips, id: \.text) { tip in
+        // Show a unique id base on its text
+        // if there is children, run through the list
+        // run throught it base .children property
+        List(tips, id: \.text, children: \.children) { tip in
             // If there are children on the tip
             if tip.children != nil {
                 Label(tip.text, systemImage: "quote.bubble")
