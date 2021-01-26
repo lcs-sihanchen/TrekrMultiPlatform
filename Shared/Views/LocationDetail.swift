@@ -42,7 +42,7 @@ struct LocationDetail: View {
                     .padding(.vertical)
                 
                 Spacer()
-            }.padding(.horizontal)
+            }.padding([.horizontal,.bottom])
             
         }
         .navigationTitle(location.name)
